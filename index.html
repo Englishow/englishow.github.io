@@ -1,275 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-   <meta charset="UTF-8">
-
-   <title>Englishow</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="theme-color" content="#157878">
-   <link rel="stylesheet" href="main.css">
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Englishow</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#157878">
+        <link rel="stylesheet" href="main.css">
     </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Englishow</h1>
-       
-    </section>
+    <body>
+        <section class="page-header">
+            <h1 class="project-name">Englishow</h1>
+        </section>
+        <section class="main-content">
+            <p></p>
+            <h2>Welcome to Englishow!</h2>
+            <div id="appContainer" style="text-align: center; color: #2c3e50;"></div>
+        </section>
+        <br>
+        <br>
+        If you have any questions, please feel free to email us at <h2 style="color: #159957">27859358@qq.com</h2>
+        <hr>
+        <div style="text-align: center; color: #2c3e50;">
+            <a href="privacy.html">Privacy</a>
+        </div>
+        <br>
+        <br>
+    </body>
+    <script>
 
-    <section class="main-content">
- 
-<p> </p>
- 
-<h2>Welcome to Englishow!</h2>
- 
-    
-<div style="text-align: center; color: #2c3e50;">   
-<br>
+				var apps=[
+				///
+				{"id":"1111857349", "name":"EnWordCard", "desc":"EnWordCard"},
+				{"id":"1071029816", "name":"Alphabet", "desc":"Alphabet"},
+				{"id":"985928081", "name":"Voices", "desc":"Voices"},
+				{"id":"1076450419", "name":"HanyuPinyin", "desc":"HanyuPinyin"},
+				{"id":"1088732517", "name":"ArabicSounds", "desc":"ArabicSounds"},
+				{"id":"1080563011", "name":"GermanSounds", "desc":"GermanSounds"},
+				{"id":"1086008379", "name":"RuSounds", "desc":"RuSounds"},
+				{"id":"1072244466", "name":"KoreanSounds", "desc":"KoreanSounds"},
+				{"id":"1065681517", "name":"JapSounds", "desc":"JapSounds"},
+				{"id":"1092920536", "name":"ItaliSounds", "desc":"ItaliSounds"},
+				{"id":"1091187419", "name":"PortuSounds", "desc":"PortuSounds"},
+				{"id":"1078128758", "name":"FrenchSound", "desc":"FrenchSound"},
+				{"id":"1073619922", "name":"Alfabeto", "desc":"Alfabeto"},
+				
+				///
+				{"id":"1118755594", "name":"FrenchWord", "desc":"FrenchWord"},
+				{"id":"1122043751", "name":"SpanishWord", "desc":"SpanishWord"},
+				{"id":"1124440413", "name":"GermanWord", "desc":"GermanWord"},
+				{"id":"1124483093", "name":"RussianWord", "desc":"RussianWord"},
+				{"id":"1123415312", "name":"KoreanWord", "desc":"KoreanWord"},			
+				{"id":"1127862629", "name":"JapaneseWord", "desc":"JapaneseWord"},
+				{"id":"1126791195", "name":"ArabicWord", "desc":"ArabicWord"},
+				{"id":"1128198569", "name":"ChineseWord", "desc":"ChineseWord"},
+				{"id":"1125817905", "name":"PortuWord", "desc":"PortuWord"},
+				{"id":"1125692153", "name":"ItalianWord", "desc":"ItalianWord"},
 
-<br>
-<a href="https://apps.apple.com/app/id1111857349" target="_blank" >
-<img src="images/EnWordCard_ico.png" /> 
-<h2>EnWordCard</h2>
-</a>
-<br>
+				///
+				{"id":"1163486313", "name":"KoreanPhrase", "desc":"KoreanPhrase"},
+				{"id":"1156389157", "name":"FrenchPhrase", "desc":"FrenchPhrase"},
+				{"id":"1161944944", "name":"SpanishPhrase", "desc":"SpanishPhrase"},
+				{"id":"1155819551", "name":"GermanPhrase", "desc":"GermanPhrase"},
+				{"id":"1165304149", "name":"RussianPhrase", "desc":"RussianPhrase"},
+				{"id":"1170901473", "name":"ItalianPhrase", "desc":"ItalianPhrase"},
+				{"id":"1168490319", "name":"ArabicPhrase", "desc":"ArabicPhrase"},
+				{"id":"1167461750", "name":"JapanesePhrase", "desc":"JapanesePhrase"},
+				{"id":"1146269500", "name":"EnglishPhrase", "desc":"EnglishPhrase"},
+					
+				];
+        
+        (function init(apps) {
+            var lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+            var country = lang;
+            if (lang.indexOf("-") > 0)
+                contry = lang.split("-")[1];
 
-<br>
-<a href="https://apps.apple.com/app/id1071029816" target="_blank" >
-<img src="images/Alphabet_ico.png" /> 
-<h2>Alphabet</h2>
-</a>
-<br>
+            var htmlSec = "";
+            for (var i = 0; i < apps.length; i++) {
+                var id = apps[i].id;
+                var name = apps[i].name;
+                var urlStr = 'https://apps.apple.com/' + contry + '/app/id' + id;
+                htmlSec += ' <br>\n <br>\n ';
+                htmlSec += ' <a href="' + urlStr + '" target="_blank" >\n ';
+                htmlSec += ' <img src="images/' + name + '_ico.png" /> \n ';
+                htmlSec += ' <h2>' + name + '</h2>\n ';
+                htmlSec += ' </a>\n ';
+            }
 
-<br>
-<a href="https://apps.apple.com/app/id985928081" target="_blank" >
-<img src="images/Voices_ico.png" /> 
-<h2>Voices</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1076450419" target="_blank" >
-<img src="images/hypy_ico.png" /> 
-
-<h2>HanyuPinyin</h2>
-</a>
-
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1088732517" target="_blank" >
-<img src="images/ArabicSounds_ico.png" /> 
-<h2>ArabicSounds</h2>
-</a>
-
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1080563011" target="_blank" >
-<img src="images/GermanSounds_ico.png" /> 
-<h2>GermanSounds</h2>
-</a>
-
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1086008379" target="_blank" >
-<img src="images/RuSounds_ico.png" /> 
-<h2>RuSounds</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1072244466" target="_blank" >
-<img src="images/KoreanSounds_ico.png" /> 
-<h2>KoreanSounds</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1065681517" target="_blank" >
-<img src="images/JapSounds_ico.png" /> 
-<h2>JapSounds</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1092920536" target="_blank" >
-<img src="images/ItaliSounds_ico.png" /> 
-<h2>ItaliSounds</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1091187419" target="_blank" >
-<img src="images/PortuSounds_ico.png" /> 
-<h2>PortuSounds</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1078128758" target="_blank" >
-<img src="images/FrenchSound_ico.png" /> 
-<h2>FrenchSound</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1073619922" target="_blank" >
-<img src="images/Alfabeto_ico.png" /> 
-<h2>Alfabeto</h2>
-</a>
-<br>
-
-<!-- Word start -->
-<br>
-<a href="https://apps.apple.com/app/id1118755594" target="_blank" >
-<img src="images/FrenchWord_ico.png" /> 
-<h2>FrenchWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1122043751" target="_blank" >
-<img src="images/SpanishWord_ico.png" /> 
-<h2>SpanishWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1124440413" target="_blank" >
-<img src="images/GermanWord_ico.png" /> 
-<h2>GermanWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1124483093" target="_blank" >
-<img src="images/RussianWord_ico.png" /> 
-<h2>RussianWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1123415312" target="_blank" >
-<img src="images/KoreanWord_ico.png" /> 
-<h2>KoreanWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1127862629" target="_blank" >
-<img src="images/JapaneseWord_ico.png" /> 
-<h2>JapaneseWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1126791195" target="_blank" >
-<img src="images/ArabicWord_ico.png" /> 
-<h2>ArabicWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1128198569" target="_blank" >
-<img src="images/ChineseWord_ico.png" /> 
-<h2>ChineseWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1125817905" target="_blank" >
-<img src="images/PortuWord_ico.png" /> 
-<h2>PortuWord</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1125692153" target="_blank" >
-<img src="images/ItalianWord_ico.png" /> 
-<h2>ItalianWord</h2>
-</a>
-<br>
-
-<!-- Word end -->
-
-
-<!-- Phrase start -->
-<br>
-<a href="https://apps.apple.com/app/id1163486313" target="_blank" >
-<img src="images/KoreanPhrase_ico.png" /> 
-<h2>KoreanPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1156389157" target="_blank" >
-<img src="images/FrenchPhrase_ico.png" /> 
-<h2>FrenchPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1161944944" target="_blank" >
-<img src="images/SpanishPhrase_ico.png" /> 
-<h2>SpanishPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1155819551" target="_blank" >
-<img src="images/GermanPhrase_ico.png" /> 
-<h2>GermanPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1165304149" target="_blank" >
-<img src="images/RussianPhrase_ico.png" /> 
-<h2>RussianPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1170901473" target="_blank" >
-<img src="images/ItalianPhrase_ico.png" /> 
-<h2>ItalianPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1168490319" target="_blank" >
-<img src="images/ArabicPhrase_ico.png" /> 
-<h2>ArabicPhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1167461750" target="_blank" >
-<img src="images/JapanesePhrase_ico.png" /> 
-<h2>JapanesePhrase</h2>
-</a>
-<br>
-
-<br>
-<a href="https://apps.apple.com/app/id1146269500" target="_blank" >
-<img src="images/EnglishPhrase_ico.png" /> 
-<h2>EnglishPhrase</h2>
-</a>
-<br>
-
-
-<br>
-</div>
-</section>
-
-  <br>  <br>  
-    
-    If you have any questions, please feel free to email us at <h2 style="color: #159957"> 27859358@qq.com</h2>
-    <hr>
-    <div style="text-align: center; color: #2c3e50;">   
-    <a href="privacy.html">Privacy</a>
-   </div>  
-    <br>  <br>  
-  </body>
+            document.getElementById("appContainer").innerHTML = htmlSec;
+        }
+        )(apps);
+        
+    </script>
 </html>
