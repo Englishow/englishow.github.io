@@ -73,13 +73,13 @@
             var lang = (navigator.language || navigator.browserLanguage).toLowerCase();
             var country = lang;
             if (lang.indexOf("-") > 0)
-                contry = lang.split("-")[1];
+                country = lang.split("-")[1];
 
             var htmlSec = "";
             for (var i = 0; i < apps.length; i++) {
                 var id = apps[i].id;
                 var name = apps[i].name;
-                var urlStr = 'https://apps.apple.com/' + contry + '/app/id' + id;
+                var urlStr = 'https://apps.apple.com/' + country + '/app/id' + id;
                 htmlSec += ' <br>\n <br>\n ';
                 htmlSec += ' <a href="' + urlStr + '" target="_blank" >\n ';
                 htmlSec += ' <img src="images/' + name + '_ico.png" /> \n ';
